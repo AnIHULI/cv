@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="locale-name">Сулейман Алирзаев</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand p-0" href="index.html"
+          ><img src="./images/logo.png" alt="sitelogo" width="50"
+        /></a>
+        <!-- Hamburger -->
+        <button
+          id="hamburgerbutton"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Header links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Поменять чтобы кнопка в бургере была меньше-->
+          <ul class="navbar-nav">
+            <li id="home-page" class="nav-item home-page">
+              <a
+                onclick="openBlock(event, 'homeblock')"
+                class="nav-link locale-menu tablinks active"
+                href="#"
+                >Обо мне</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="testdoc"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'testdocblock')"
+                >Тестовая документация</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="sql"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'Sqlblock')"
+                >SQL</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="api"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'Apiblock')"
+                >API</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="checklists"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'Checklists')"
+                >Чек-листы</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="testcases"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'Testcases')"
+                >Тест кейсы</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="bugreports"
+                class="nav-link locale-menu secondary-navbtn tablinks"
+                href="#"
+                onclick="openBlock(event, 'Bugreports')"
+                >Баг репорты</a
+              >
+            </li>
+
+            <!-- Lang selector in hambuger menu -->
+            <!-- <button
+            id="lngbtnenham"
+            type="button"
+            class="btn btn-warning locale-switchlangbtn"
+            aria-expanded="false"
+            onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnruham').style.display = 'inline-block'; changeLocaleService.changeLocale('en')" class="locale-home-buttons"
+          ></button>
+            <button
+            style="display: none;"
+            id="lngbtnruham"
+            type="button"
+            class="btn btn-warning locale-switchlangbtn"
+            aria-expanded="false"
+            onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnenham').style.display = 'inline-block'; changeLocaleService.changeLocale('ru')" class="locale-home-buttons"
+          ></button> -->
+
+            <button
+              id="lngbtnen"
+              type="button"
+              class="btn btn-info locale-switchlangbtn btn-wrapper-end"
+              aria-expanded="false"
+              onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnru').style.display = 'inline-block'; changeLocaleService.changeLocale('en')"
+              class="locale-home-buttons"
+            ></button>
+            <button
+              style="display: none"
+              id="lngbtnru"
+              type="button"
+              class="btn btn-info locale-switchlangbtn btn-wrapper-end"
+              aria-expanded="false"
+              onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnen').style.display = 'inline-block'; changeLocaleService.changeLocale('ru')"
+              class="locale-home-buttons"
+            ></button>
+
+            <!-- <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-warning dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Switch Language
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/CV3/eng.html">
+                    <i class="flag flag-us"> English</i></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="flag flag-ru"> Русский</i></a
+                  >
+                </li>
+              </ul>
+            </div> -->
+          </ul>
+        </div>
+      </div>
+      <!-- Lang selector in header -->
+      <!-- <select class="change-lang">
+        <option value="ru" selected>RU</option>
+        <option value="en">EN</option>
+    </select> -->
+      <!-- <div class="btn-group change-lang">
+        <button
+          type="button"
+          class="btn btn-info dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Switch Language
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item">
+              <i class="flag flag-us" value="en"> English</i></a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item active">
+              <i class="flag flag-ru" value="ru"> Русский</i></a
+            >
+          </li>
+        </ul>
+      </div> -->
+      <!-- <div class="btn-group">
+        <button
+          id="lngbtn"
+          type="button"
+          class="btn btn-info dropdown-toggle lng-switch-lang"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        ></button> -->
+
+      <!-- Switch Language  -->
+
+      <!-- <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item">
+              <i class="flag flag-us" value="en"> English</i></a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item active">
+              <i class="flag flag-ru" value="ru" selected> Русский</i></a
+            >
+          </li>
+        </ul> -->
+
+      <!-- <button
+        id="lngbtnen"
+        type="button"
+        class="btn btn-info locale-switchlangbtn"
+        aria-expanded="false"
+        onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnru').style.display = 'inline-block'; changeLocaleService.changeLocale('en')" class="locale-home-buttons"
+      ></button>
+        <button
+        style="display: none;"
+        id="lngbtnru"
+        type="button"
+        class="btn btn-info locale-switchlangbtn"
+        aria-expanded="false"
+        onclick="var el = this; el.style.display = (el.style.display == 'none') ? '' : 'none'; document.getElementById('lngbtnen').style.display = 'inline-block'; changeLocaleService.changeLocale('ru')" class="locale-home-buttons"
+      ></button>
+      </div> -->
+    </nav>
+
+    <!-- Presentation block -->
+    <div class="container mt-5 mx-1">
+      <div class="row">
+        <div class="col-md-10 col-11 mx-auto">
+          <img class="avatar" src="./images/myphoto.png" alt="My photo" />
+          <div class="info-text">
+            <h4 class="fw-bold avatar-text locale-name">Сулейман Алирзаев</h4>
+            <p class="fw-boldlead text-muted avatar-text locale-info-text">
+              Люблю вникать в детали того, что делаю. Нравится автоматизровать
+              рутинные дела и разбираться в коде. Нравится находить баги,
+              локализовать их и отправлять в работу и видеть её результат.
+            </p>
+            <br />
+            <img src="./images/tel.png" alt="phone" class="contactdataimages" />
+            <a href="tel:+79525676024" class="contactdata">+79525676024</a>
+            <img
+              src="./images/tg.webp"
+              alt="telegram"
+              class="contactdataimages"
+            />
+            <a href="https://t.me/AnVIRUS" class="contactdata" target="_blank"
+              >@AnVIRUS</a
+            >
+            <img src="./images/mail.jpg" alt="mail" class="contactdataimages" />
+            <a href="mailto:anvirus95@icloud.com" class="contactdata"
+              >anvirus95@icloud.com</a
+            >
+            <img
+              src="./images/linkedin.png"
+              alt="LinkedIn"
+              class="contactdataimages"
+            />
+            <a
+              href="https://www.linkedin.com/in/suleyman-alirzaev-29274b1b3/"
+              class="contactdata"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <img
+              src="./images/github.png"
+              alt="GitHub"
+              class="contactdataimages"
+            />
+            <a
+              href="https://github.com/AnIHULI/"
+              class="contactdata"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <!-- Infoblocks -->
+
+    <div id="homeblock" class="album py-5 bg-light tabcontent home-block">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/test_doc.jpg"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#testdoc').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/sql.jpg"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#sql').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/api.webp"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#api').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/checklist.png"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#checklists').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/testcase.webp"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#testcases').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex">
+            <div class="card shadow-sm mycard">
+              <img
+                src="./images/bug_report.png"
+                class="card-img-top"
+                alt="Test documentation"
+              />
+              <div class="card-body mycardbody">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary locale-placeholder_boxes"
+                        onclick="document.querySelector('#bugreports').dispatchEvent(new Event('click'))"
+                      ></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="testdocblock" class="tabcontent">
+      <div class="album py-5 bg-light">
+        <div class="container"></div>
+        <h1>Testdoc</h1>
+      </div>
+    </div>
+
+    <div id="Sqlblock" class="tabcontent">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="spoiler">
+            <input type="checkbox" id="sqlspoiler1" />
+            <label for="sqlspoiler1">SQL #1</label>
+            <div>
+              <a
+                href="https://github.com/AnIHULI/Examples/blob/main/SQL/1.sql"
+                class="btn btn-primary btn-link-download"
+                >Go to GitHub
+                <pre><code id="sql1" class="sql"></code></pre>
+              </a>
+            </div>
+          </div>
+          <div class="spoiler">
+            <input type="checkbox" id="sqlspoiler2" />
+            <label for="sqlspoiler2">SQL #2</label>
+            <div>
+              <a
+                href="https://github.com/AnIHULI/Examples/blob/main/SQL/2.sql"
+                class="btn btn-primary btn-link-download"
+                >Go to GitHub
+                <pre><code id="sql2" class="sql"></code></pre>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Apiblock" class="tabcontent">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="spoiler">
+            <input type="checkbox" id="apispoiler1" />
+            <label for="apispoiler1">API Postman #1</label>
+            <div>
+              <a
+                href="https://github.com/AnIHULI/Examples/blob/main/API/1.postman_collection.json"
+                class="btn btn-primary btn-link-download"
+                >Go to GitHub
+                <pre><code id="api1" class="json"></code></pre>
+              </a>
+            </div>
+          </div>
+          <div class="spoiler">
+            <input type="checkbox" id="apispoiler2" />
+            <label for="apispoiler2">API Postman #2</label>
+            <div>
+              <a
+                href="https://github.com/AnIHULI/Examples/blob/main/API/2.postman_collection.json"
+                class="btn btn-primary btn-link-download"
+                >View collection on GitHub
+                <pre><code id="api2" class="json"></code></pre>
+              </a>
+            </div>
+          </div>
+          <div class="spoiler">
+            <input type="checkbox" id="apispoiler3" />
+            <label for="apispoiler3">API Postman #3</label>
+            <div>
+              <a
+                href="https://github.com/AnIHULI/Examples/blob/main/API/3.postman_collection.json"
+                class="btn btn-primary btn-link-download"
+                >View collection on GitHub
+                <pre><code id="api3" class="json"></code></pre>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Checklists" class="tabcontent">
+      <h1>Checklists</h1>
+    </div>
+    <div id="Testcases" class="tabcontent">
+      <h1>Testcases</h1>
+    </div>
+    <div id="Bugreports" class="tabcontent">
+      <h1>Bugreports</h1>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Myscripts -->
+    <script src="./js/jscript.js"></script>
+    <!-- Localization script -->
+    <script src="./js/lang.js"></script>
+
+    <!-- Add code -->
+    <script>
+      fetch("./examples/sql/1.sql")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sql1").textContent = data;
+          // hljs.initHighlighting.called = false;
+          hljs.highlightAll();
+        });
+    </script>
+    <script>
+      fetch("./examples/sql/2.sql")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sql2").textContent = data;
+          // hljs.initHighlighting.called = false;
+          hljs.highlightAll();
+        });
+    </script>
+    <script>
+      fetch("./examples/api/1.postman_collection.json")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("api1").textContent = data;
+          // hljs.initHighlighting.called = false;
+          hljs.highlightAll();
+        });
+    </script>
+    <script>
+      fetch("./examples/api/2.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("api2").textContent = data;
+          // hljs.initHighlighting.called = false;
+          hljs.highlightAll();
+        });
+    </script>
+    <script>
+      fetch("./examples/api/3.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("api3").textContent = data;
+          // hljs.initHighlighting.called = false;
+          hljs.highlightAll();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "533d4653-1f63-4943-81dc-5ef24aab0cc2",
+		"name": "1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14673334"
+	},
+	"item": [
+		{
+			"name": "EX_1",
+			"item": [
+				{
+					"name": "/get_method",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/get_method?age=26&name=Suleyman",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"get_method"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "26"
+								},
+								{
+									"key": "name",
+									"value": "Suleyman"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user_info_3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "26",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user_info_3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_info_3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/object_info_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/object_info_1?name=anvirus&age=26&weight=80",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"object_info_1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "anvirus"
+								},
+								{
+									"key": "age",
+									"value": "26"
+								},
+								{
+									"key": "weight",
+									"value": "80"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/object_info_2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/object_info_2?name=anvirus&age=26&salary=1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"object_info_2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "anvirus"
+								},
+								{
+									"key": "age",
+									"value": "26"
+								},
+								{
+									"key": "salary",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/object_info_3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/object_info_3?name=anvirus&age=26&salary=1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"object_info_3"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "anvirus"
+								},
+								{
+									"key": "age",
+									"value": "26"
+								},
+								{
+									"key": "salary",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/object_info_4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/object_info_4?name=anvirus&age=26&salary=1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"object_info_4"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "anvirus"
+								},
+								{
+									"key": "age",
+									"value": "26"
+								},
+								{
+									"key": "salary",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user_info_2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "26",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user_info_2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_info_2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

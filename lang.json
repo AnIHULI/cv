@@ -1,0 +1,50 @@
+{
+  "en": {
+    "switchlangbtn": "Изменить язык на русский",
+    "menu": [
+      "About me",
+      "Test documentation",
+      "SQL",
+      "API",
+      "Check-lists",
+      "Test-cases",
+      "Bug reports"
+    ],
+    "name": "Suleyman Alirzaev",
+    "info-text": "I like to delve into the details of what I do. I like to automate routine tasks and understand the code. I like to find bugs, localize them and send them to work and see its result.",
+    "placeholder_boxes": [
+      "Test documentation",
+      "SQL",
+      "API",
+      "Check-lists",
+      "Test-cases",
+      "Bug reports"
+    ],
+    "examples-btn": "View examples",
+    "github": "Open collection on GitHub"
+  },
+  "ru": {
+    "switchlangbtn": "Change language to English",
+    "menu": [
+      "Обо мне",
+      "Тестовая документация",
+      "SQL",
+      "API",
+      "Чек-листы",
+      "Тест-кейсы",
+      "Баг репорты"
+    ],
+    "name": "Сулейман Алирзаев",
+    "info-text": "Люблю вникать в детали того, что делаю. Нравится автоматизировать рутинные дела и разбираться в коде. Нравится находить баги, локализовать их и отправлять в работу и видеть её результат.",
+    "placeholder_boxes": [
+      "Тестовая документация",
+      "SQL",
+      "API",
+      "Чек-листы",
+      "Тест-кейсы",
+      "Баг репорты"
+    ],
+    "examples-btn": "Открыть примеры",
+    "github": "Открыть коллекцию на GitHub'е"
+  }
+}
